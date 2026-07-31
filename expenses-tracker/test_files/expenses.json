@@ -1,0 +1,272 @@
+[
+  {
+    "date": "2026-01-02",
+    "description": "January salary",
+    "category": "Income",
+    "amount": 4850.0
+  },
+  {
+    "date": "2026-01-03",
+    "description": "Green Basket Market",
+    "category": "Groceries",
+    "amount": -126.48
+  },
+  {
+    "date": "2026-01-04",
+    "description": "Metro Monthly Pass",
+    "category": "Transport",
+    "amount": -95.0
+  },
+  {
+    "date": "2026-01-05",
+    "description": "Maple Street Apartments",
+    "category": "Housing",
+    "amount": -1450.0
+  },
+  {
+    "date": "2026-01-06",
+    "description": "Northstar Fiber",
+    "category": "Utilities",
+    "amount": -64.99
+  },
+  {
+    "date": "2026-01-07",
+    "description": "StreamWave Plus",
+    "category": "Subscriptions",
+    "amount": -15.99
+  },
+  {
+    "date": "2026-01-09",
+    "description": "Corner Cup Cafe",
+    "category": "Dining",
+    "amount": -6.75
+  },
+  {
+    "date": "2026-01-10",
+    "description": "CityCare Pharmacy",
+    "category": "Healthcare",
+    "amount": -38.2
+  },
+  {
+    "date": "2026-01-12",
+    "description": "BrightMind Learning",
+    "category": "Education",
+    "amount": -89.0
+  },
+  {
+    "date": "2026-01-14",
+    "description": "RideNow",
+    "category": "Transport",
+    "amount": -24.6
+  },
+  {
+    "date": "2026-01-15",
+    "description": "Employer expense reimbursement",
+    "category": "Reimbursement",
+    "amount": 142.35
+  },
+  {
+    "date": "2026-01-17",
+    "description": "Harbor Bistro",
+    "category": "Dining",
+    "amount": -72.4
+  },
+  {
+    "date": "2026-01-20",
+    "description": "Peak Fitness",
+    "category": "Health and Fitness",
+    "amount": -42.0
+  },
+  {
+    "date": "2026-01-22",
+    "description": "Page & Pine Books",
+    "category": "Education",
+    "amount": -31.5
+  },
+  {
+    "date": "2026-01-25",
+    "description": "Green Basket Market",
+    "category": "Groceries",
+    "amount": 18.75
+  },
+  {
+    "date": "2026-01-27",
+    "description": "CloudBox Storage",
+    "category": "Subscriptions",
+    "amount": -9.99
+  },
+  {
+    "date": "2026-02-01",
+    "description": "Maple Street Apartments",
+    "category": "Housing",
+    "amount": -1450.0
+  },
+  {
+    "date": "2026-02-02",
+    "description": "February salary",
+    "category": "Income",
+    "amount": 4850.0
+  },
+  {
+    "date": "2026-02-03",
+    "description": "Green Basket Market",
+    "category": "Groceries",
+    "amount": -98.32
+  },
+  {
+    "date": "2026-02-04",
+    "description": "Metro Monthly Pass",
+    "category": "Transport",
+    "amount": -95.0
+  },
+  {
+    "date": "2026-02-06",
+    "description": "Northstar Fiber",
+    "category": "Utilities",
+    "amount": -64.99
+  },
+  {
+    "date": "2026-02-08",
+    "description": "Trailhead Outfitters",
+    "category": "Shopping",
+    "amount": -134.9
+  },
+  {
+    "date": "2026-02-10",
+    "description": "Willow Dental Clinic",
+    "category": "Healthcare",
+    "amount": -185.0
+  },
+  {
+    "date": "2026-02-12",
+    "description": "StreamWave Plus",
+    "category": "Subscriptions",
+    "amount": -15.99
+  },
+  {
+    "date": "2026-02-14",
+    "description": "Luna Cinema",
+    "category": "Entertainment",
+    "amount": -28.0
+  },
+  {
+    "date": "2026-02-16",
+    "description": "Sunrise Airlines",
+    "category": "Travel",
+    "amount": -386.45
+  },
+  {
+    "date": "2026-02-18",
+    "description": "Peak Fitness",
+    "category": "Health and Fitness",
+    "amount": -42.0
+  },
+  {
+    "date": "2026-02-20",
+    "description": "Oak & Ember",
+    "category": "Dining",
+    "amount": -54.8
+  },
+  {
+    "date": "2026-02-22",
+    "description": "CloudBox Storage",
+    "category": "Subscriptions",
+    "amount": -9.99
+  },
+  {
+    "date": "2026-02-25",
+    "description": "Sunrise Airlines",
+    "category": "Travel",
+    "amount": 65.0
+  },
+  {
+    "date": "2026-03-01",
+    "description": "Maple Street Apartments",
+    "category": "Housing",
+    "amount": -1450.0
+  },
+  {
+    "date": "2026-03-02",
+    "description": "March salary",
+    "category": "Income",
+    "amount": 4850.0
+  },
+  {
+    "date": "2026-03-03",
+    "description": "Green Basket Market",
+    "category": "Groceries",
+    "amount": -143.67
+  },
+  {
+    "date": "2026-03-04",
+    "description": "Metro Monthly Pass",
+    "category": "Transport",
+    "amount": -95.0
+  },
+  {
+    "date": "2026-03-06",
+    "description": "Northstar Fiber",
+    "category": "Utilities",
+    "amount": -64.99
+  },
+  {
+    "date": "2026-03-08",
+    "description": "Seabreeze Hotel",
+    "category": "Travel",
+    "amount": -412.0
+  },
+  {
+    "date": "2026-03-10",
+    "description": "Coastal Car Hire",
+    "category": "Travel",
+    "amount": -176.25
+  },
+  {
+    "date": "2026-03-12",
+    "description": "StreamWave Plus",
+    "category": "Subscriptions",
+    "amount": -15.99
+  },
+  {
+    "date": "2026-03-15",
+    "description": "Market Square Food Hall",
+    "category": "Dining",
+    "amount": -21.35
+  },
+  {
+    "date": "2026-03-18",
+    "description": "Peak Fitness",
+    "category": "Health and Fitness",
+    "amount": -42.0
+  },
+  {
+    "date": "2026-03-20",
+    "description": "Freelance data cleanup",
+    "category": "Income",
+    "amount": 620.0
+  },
+  {
+    "date": "2026-03-22",
+    "description": "CloudBox Storage",
+    "category": "Subscriptions",
+    "amount": -9.99
+  },
+  {
+    "date": "2026-03-24",
+    "description": "HomeWorks Supply",
+    "category": "Home",
+    "amount": -78.43
+  },
+  {
+    "date": "2026-03-27",
+    "description": "Community Animal Shelter",
+    "category": "Charity",
+    "amount": -50.0
+  },
+  {
+    "date": "2026-03-29",
+    "description": "Employer wellness reimbursement",
+    "category": "Reimbursement",
+    "amount": 42.0
+  }
+]
