@@ -1,9 +1,17 @@
+from typing import TypedDict
+
 import pandas as pd
 from ui.handlers.ui_handler import UiHandler
 
 
+class FilterOptions(TypedDict):
+    category: str
+    start_date: str
+    end_date: str
+
+
 class FilterByDateAndCategory(UiHandler):
-    def _show_menu(self):
+    def _show_menu(self) -> FilterOptions:
         start_date = input(
             "Type the start-date (yyyy-mm-dd) (press enter to leave it blank):"
         )
@@ -17,13 +25,15 @@ class FilterByDateAndCategory(UiHandler):
             "end_date": end_date,
         }
 
-    def _filter_by_category(self, expenses_df: pd.DataFrame, category: str):
+    def _filter_by_category(
+        self, expenses_df: pd.DataFrame, category: str
+    ) -> pd.DataFrame:
         return expenses_df[expenses_df["category"] == category]
 
     def _filter_by_date(
         self, expenses_df: pd.DataFrame, start_date: str, end_date: str
-    ):
-        filtered_df = expenses_df.copy()
+    ) -> pd.DataFrame:
+        filtered_df = pd.DataFrame(expenses_df.copy())
 
         if start_date:
             parsed_start_date = pd.to_datetime(start_date)
@@ -35,7 +45,7 @@ class FilterByDateAndCategory(UiHandler):
 
         return filtered_df
 
-    def execute(self, expenses_df):
+    def execute(self, expenses_df) -> None:
         global filtered_df
         filtered_df = expenses_df
 

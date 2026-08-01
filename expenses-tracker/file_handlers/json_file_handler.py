@@ -5,9 +5,9 @@ from file_handlers.file_handler import FileHandler
 
 
 class JSONFileHandler(FileHandler):
-    def read(self):
+    def read(self) -> pd.DataFrame:
         return pd.read_json(self.file_path)
 
-    def write(self, json_object):
+    def write(self, json_object) -> None:
         with open(self.file_path, "w") as f:
             f.write(json.dumps(json_object))

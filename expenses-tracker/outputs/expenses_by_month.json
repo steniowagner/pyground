@@ -1,5 +1,1 @@
-{
-  "2026-01": { "total_amount": 2944.2, "transaction_count": 16 },
-  "2026-02": { "total_amount": 2349.56, "transaction_count": 14 },
-  "2026-03": { "total_amount": 2952.33, "transaction_count": 15 }
-}
+{"2026-01":{"total_amount":2944.2,"transaction_count":16},"2026-02":{"total_amount":2349.56,"transaction_count":14},"2026-03":{"total_amount":2952.33,"transaction_count":15}}

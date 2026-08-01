@@ -3,7 +3,7 @@ from ui.handlers.ui_handler import UiHandler
 
 
 class GroupExpensesByCategory(UiHandler):
-    def execute(self, expenses_df: DataFrame):
+    def execute(self, expenses_df: DataFrame) -> None:
         categories = set()
 
         for _, expense in expenses_df.iterrows():

@@ -1,16 +1,17 @@
 from pathlib import Path
 
+from pandas import DataFrame
 from ui.handlers.ui_handler import UiHandler
 
 
 class ExportMonthlySummary(UiHandler):
     output_path = "outputs/expenses_by_month.json"
 
-    def _handle_create_directory(self):
+    def _handle_create_directory(self) -> None:
         file_path = Path(self.output_path)
         file_path.parent.mkdir(parents=True, exist_ok=True)
 
-    def execute(self, expenses_df):
+    def execute(self, expenses_df: DataFrame) -> None:
         self._handle_create_directory()
 
         df_groupped_by_month = (

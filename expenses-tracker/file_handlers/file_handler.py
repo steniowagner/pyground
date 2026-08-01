@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from pathlib import Path
+from typing import Any
 
 from pandas import DataFrame
 
@@ -9,9 +10,7 @@ class FileHandler(ABC):
         self.file_path = Path(file_path).expanduser()
 
     @abstractmethod
-    def read(self) -> DataFrame:
-        pass
+    def read(self, **kwargs: Any) -> DataFrame: ...
 
     @abstractmethod
-    def write(self):
-        pass
+    def write(self) -> None: ...

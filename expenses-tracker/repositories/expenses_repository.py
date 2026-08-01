@@ -7,16 +7,35 @@ from file_handlers.file_handler_factory import create_file_handler
 
 class ExpensesRepository:
     def __init__(self):
-        self.df = pd.DataFrame()
+        self._df = pd.DataFrame()
 
-    def _run_file_checks(self, path: Path):
+    @property
+    def df(self) -> pd.DataFrame:
+        return self._df.copy()
+
+    def _run_file_checks(self, path: Path) -> None:
         if not path.exists():
             raise FileNotFoundError(f"File not found: {path}")
 
         if not path.is_file():
             raise ValueError(f"Path is not a file: {path}")
 
-    def _run_df_checks(self, dataframe: pd.DataFrame):
+    def _normalize_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
+        normalized: pd.DataFrame = df.copy()
+
+        normalized["date"] = pd.to_datetime(normalized["date"], errors="raise")
+
+        normalized["amount"] = pd.to_numeric(normalized["amount"], errors="raise")
+
+        normalized["description"] = (
+            normalized["description"].astype("string").str.strip()
+        )
+
+        normalized["category"] = normalized["category"].astype("string").str.strip()
+
+        return normalized
+
+    def _run_df_checks(self, dataframe: pd.DataFrame) -> None:
         required_columns = set(EXPENSES_CSV_REQUIRED_COLUMNS)
         missing_columns = required_columns - set(dataframe.columns)
         if missing_columns:
@@ -24,12 +43,10 @@ class ExpensesRepository:
             error_message = f"Missing required columns: {missing}"
             raise ValueError(error_message)
 
-    def load(self, str_path: str):
-        path = Path(str_path).expanduser()
+    def load(self, path: Path) -> None:
         self._run_file_checks(path)
 
         handler = create_file_handler(path)
-        df = handler.read()
+        df = self._normalize_dataframe(handler.read())
         self._run_df_checks(df)
-        self.df = df
-        self.df["date"] = pd.to_datetime(self.df["date"], errors="raise")
+        self._df = df

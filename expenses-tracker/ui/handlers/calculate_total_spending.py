@@ -3,6 +3,6 @@ from ui.handlers.ui_handler import UiHandler
 
 
 class CalculateTotalSpending(UiHandler):
-    def execute(self, expenses_df: DataFrame):
+    def execute(self, expenses_df: DataFrame) -> None:
         total = expenses_df["amount"].sum()
         print(f"Total spending: $ {total:.2f}")

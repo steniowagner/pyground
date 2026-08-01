@@ -1,22 +1,34 @@
+import pandas as pd
 from repositories.expenses_repository import ExpensesRepository
-from ui.datasource_filepath import DatasourceFilepath
+from ui.handlers.get_datasource_path import get_datasource_path
 from ui.menu import Menu
 from ui.utils import clear_terminal
 
 
-def load_expenses_df():
-    datasource_filepath = DatasourceFilepath()
-    file_path = datasource_filepath.get_filepath()
+def load_expenses() -> ExpensesRepository:
+    file_path = get_datasource_path()
     expenses_repository = ExpensesRepository()
     expenses_repository.load(file_path)
-    return expenses_repository.df
+    return expenses_repository
 
 
-def main():
+def main() -> None:
     clear_terminal()
-    expenses_df = load_expenses_df()
-    menu = Menu()
-    menu.run(expenses_df)
+
+    try:
+        expenses_repository = load_expenses()
+    except FileNotFoundError as error:
+        print(f"File error: {error}")
+        return
+    except UnicodeTranslateError as error:
+        print(error)
+        return
+    except (ValueError, pd.errors.ParserError) as error:
+        print(f"Invalid expense data: {error}")
+        return
+
+    Menu().run(expenses_repository.df)
 
 
-main()
+if __name__ == "__main__":
+    main()
